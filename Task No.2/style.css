@@ -92,17 +92,21 @@ body {
 .intro-button {
     position: relative;
 }
-.intro-button .btn {
-    background: #3498db;
+.intro-button .btn1,
+.intro-button .btn2 {
     color: white;
     padding: 10px 20px;
     margin: 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    border: none;
+    border-radius: 5px;
 }
-.intro-button .btn:hover{
+.intro-button .btn1 {
     background: #1abc9c;
-    transition: 0.3s ease;
+}
+.intro-button .btn2 {
+    background: #3498db;
 }
 .or {
     height: 28px;
@@ -341,7 +345,7 @@ svg {
       height: 90%;
       object-fit: contain;
       filter: drop-shadow(0 5px 3px black);
-      position: relative;
+      position: absolute;
   }
   
   .button {
