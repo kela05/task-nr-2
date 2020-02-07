@@ -1,18 +1,28 @@
 @import url(//db.onlinewebfonts.com/c/474fea7a12ce2b036dbcfcac9a5edff2?family=Blessed+Day);
-
 @font-face {font-family: "Blessed Day"; src: url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.eot"); src: url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.woff") format("woff"), url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/474fea7a12ce2b036dbcfcac9a5edff2.svg#Blessed Day") format("svg"); }
-html,body {
-    /* background: url(AdobeStock_100000042-e1563305717660-686x371.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0,0,0); */
-    background-color: rgba(69, 71, 83, 0.4);
-    position: relative;
-    z-index: -1;
-}
+
+
 * {
     box-sizing: border-box;
 }
+body {
+    position: relative;
+}
+.first-bckg {
+    background: 
+          /* top, transparent red, faked with gradient */ 
+          linear-gradient(
+            rgba(10, 54, 184, 0.45), 
+            rgba(10, 27, 175, 0.45)
+          ),
+          /* bottom, image */
+          url(./images/IMG12751300x866.png);  
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -52,6 +62,8 @@ html,body {
     align-items: center;
     padding: 20px 150px;
     height: auto;
+    position: relative;
+    z-index: 2;
 }
 .intro-img {
     width:auto;
@@ -77,7 +89,9 @@ html,body {
 .intro-block p {
     font-size: 18px;
 }
-
+.intro-button {
+    position: relative;
+}
 .intro-button .btn {
     background: #3498db;
     color: white;
@@ -90,6 +104,28 @@ html,body {
     background: #1abc9c;
     transition: 0.3s ease;
 }
+.or {
+    height: 28px;
+    width: 28px;
+    border: 1px solid none;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    position: relative; /* -- middle or---  */
+    display: inline-block;
+    vertical-align: middle;
+    /* position: absolute;
+    z-index: 1;
+    top: 25%;
+    transform: translate(-50%, 0); */
+}
+.or h4 {
+    margin-top: 7px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* mobile responsive */
 @media screen and (max-width: 750px){
     .intro {
         flex-wrap: wrap;
@@ -112,26 +148,28 @@ html,body {
         margin: 0 30px;
     }
     .intro-button {
-       padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
     }
 }
 
-.or {
-    height: 28px;
-    width: 28px;
-    border: 1px solid none;
-    background: white;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+/* ipad responsive */
+@media screen and (max-width: 1000px){
+    .intro {
+        padding: 0 30px;
+    }
+    .intro-img {
+        width:auto;
+        text-align:center;
+    }
+    .intro-img #img {
+        width: 70%;
+        height: 80%;
+    }
 }
-.or h4 {
-    margin-top: 5px;
-    font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
-}
+
 /* -------- */
 
 .about-us {
@@ -144,7 +182,7 @@ html,body {
 .svg-wave {
     bottom: 0;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 svg {
   position: absolute;
@@ -163,12 +201,34 @@ svg {
     font-size: 18px;
     margin-right: 50px;
 }
+
+/* mobile responsive*/
+
 @media screen and (max-width: 750px){
     .about-us {
         display: block;
         padding: 0;
-        padding-left: 30px;
         text-align: center;
+    }
+    .about-info p {
+        margin: auto;
+        padding: 20px;
+    }
+}
+
+/* ipad responsive */
+
+@media screen and (max-width: 1180px){
+    .about-us {
+        display: block;
+        padding: 0;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .about-info p {
+        padding: 40px;
+        margin: 0 20px;
     }
 }
 
@@ -189,6 +249,8 @@ svg {
     font-size: 14px;
     margin: 0 20px;
 }
+
+/* mobile responsive */
 @media screen and (max-width: 550px){
     .options {
         flex-wrap: wrap;
@@ -199,10 +261,31 @@ svg {
     }
 }
 
+/* ipad responsive */
+@media screen and (max-width: 1000px){
+    .options {
+        flex-direction: column;
+    }
+    .opt-1 {
+        padding: 20px 0;
+    }
+}
+
 /* ---- slider ----- */
 
 .slider-section {
+    background: 
+          /* top, transparent red, faked with gradient */ 
+          linear-gradient(
+            rgba(10, 54, 184, 0.45), 
+            rgba(10, 27, 175, 0.45)
+          ),
+          /* bottom, image */
+          url(./images/Layer2.png);  
     padding: 20px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 .info-section {
     margin: 30px 0;
@@ -225,6 +308,8 @@ svg {
     justify-content: center;
     align-items: center;
     height: 60vh;
+    position: relative;
+    z-index: 2;
   }
   
   .slider-wrapper {
@@ -256,6 +341,7 @@ svg {
       height: 90%;
       object-fit: contain;
       filter: drop-shadow(0 5px 3px black);
+      position: absolute;
   }
   
   .button {
@@ -277,6 +363,8 @@ svg {
     right: 17%;
     transform: rotate(45deg);
   }
+
+  /* mobile responsive */
   @media screen and (max-width: 750px){
     .slide img {
       width: 50%;
@@ -284,24 +372,33 @@ svg {
       object-fit: contain;
     }
     .button {
-      width: 20px;
-      height: 20px;
-      border-top: 5px solid #fff;
+      width: 22px;
+      height: 22px;
+      border-top: 7px solid #fff;
     }
     
     .prev {
-      border-left: 5px solid #fff;
+      border-left: 7px solid #fff;
+      left: 15%;
     }
     
     .next {
-      border-right: 5px solid #fff;
+      border-right: 7px solid #fff;
+      right: 15%;
     }
   }
+
+/* ipad responsive*/
+@media screen and (max-width: 1000px){
+    .info-section {
+        padding: 0 40px;
+    }
+}
 
 /* ----rectangle-----*/
 .rectangle {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 svg {
     bottom: 0;
@@ -333,12 +430,14 @@ svg {
     grid-template-columns: 12em 25em;
 
 }
-@media screen and (max-width: 750px){
+
+/* mobile responsive & ipad responsive */
+@media screen and (max-width: 1000px){
     .opinion {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        margin: 0;
+        margin: auto;
+        align-items: center;
     }
 }
 
@@ -354,8 +453,14 @@ svg {
     color: #ffffff
 }
 .contact-info h1,
-.contact-info p {
+.contact-info p,
+.contact-info li{
     font-family: 'Open Sans', sans-serif;
+}
+.contact-info li {
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
 }
 .contact-info p {
     font-size: 14px;
@@ -393,7 +498,7 @@ svg {
     right: 5px;
     bottom: 0;
     padding: 0 1em;
-    background: #3498db;
+    background: #1abc9c;
     color: white;
     position: absolute;
     height: 50px;
@@ -404,19 +509,19 @@ svg {
     font-size: 18px;
 }
 .select-form:hover:before {
-    background: #1abc9c;
+    background: #3498db;
     transition: 0.3s ease;
 }
 
 .contact-form #putname,
 .contact-form #putemail {
-    width: 49%;
+    width: 49.5%;
 }
 .contact-form .buttons {
     text-align: right;
 }
 .contact-form #btn {
-    background: #3498db;
+    background: #1abc9c;
     color: white;
     padding: 10px 40px;
     margin: 5px;
@@ -427,10 +532,12 @@ svg {
     width: 30%;
 }
 .contact-form #btn:hover {
-    background: #1abc9c;
+    background: #3498db;
     transition: 0.3s ease;
 }
-@media screen and (max-width: 550px){
+
+/* mobile responsive */
+@media screen and (max-width: 750px){
     .contact {
         flex-wrap: wrap;
         padding: 20px 20px;
@@ -445,22 +552,41 @@ svg {
     .contact-form #putemail {
         width: 100%;
     }
-    .contact-form .button {
+    .contact-form .buttons {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .contact-form #btn {
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .contact {
+        flex-direction: column;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .contact-info li {
+        text-align: center;
+    }
+    .contact-form .buttons {
         text-align: center;
     }
 }
 
-.contact:after {
+.contact-form:after {
     content:'';
     position: absolute;
+    bottom: 160px;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 0;
     height: 0;
-    border-bottom: solid 30px #2c3e50;
-    border-left: solid 30px transparent;
-    border-right: solid 30px transparent;
+    border-bottom: solid 25px #2c3e50;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
 }
 
 /* footer */
