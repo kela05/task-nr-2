@@ -341,7 +341,7 @@ svg {
       height: 90%;
       object-fit: contain;
       filter: drop-shadow(0 5px 3px black);
-      position: absolute;
+      position: relative;
   }
   
   .button {
@@ -460,7 +460,6 @@ svg {
 .contact-info li {
     list-style: none;
     font-size: 14px;
-    text-align: left;
 }
 .contact-info p {
     font-size: 14px;
@@ -520,8 +519,8 @@ svg {
 .contact-form .buttons {
     text-align: right;
 }
-.contact-form #btn {
-    background: #1abc9c;
+.contact-form #btn1,
+.contact-form #btn2 {
     color: white;
     padding: 10px 40px;
     margin: 5px;
@@ -531,10 +530,16 @@ svg {
     border-radius: 5px;
     width: 30%;
 }
-.contact-form #btn:hover {
+.contact-form #btn1 {
+    background: #1abc9c;
+}
+.contact-form #btn2 {
+    background: #3498db;
+}
+/* .contact-form #btn:hover {
     background: #3498db;
     transition: 0.3s ease;
-}
+} */
 
 /* mobile responsive */
 @media screen and (max-width: 750px){
